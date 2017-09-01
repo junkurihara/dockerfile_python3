@@ -1,5 +1,5 @@
 # Dockerfile for a basic environment with Python 3
-A dockerfile to build a basic environment of `python3.6` with `venv`.
+A dockerfile to build a basic environment of `python3.6` with `venv`. To append other python modules via `pip`, `requirements.txt` needs to be configured before you build the image. The `requirements.txt` is written in the `python` requirements format given by `pip freeze` in your desired environment.
 
 ## How to build the docker image from the Dockerfile
 ```
