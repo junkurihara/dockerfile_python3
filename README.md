@@ -23,3 +23,12 @@ $ ssh -p 10000 ubuntu@localhost
 ```
 $ docker exec -u ubuntu -it basic_python3 /bin/bash -c "cd ~ && /bin/bash"
 ```
+
+## Where is `venv` directory?
+It is specified by `${VENV_DIR}` in the Dockerfile and the default location is `/home/ubuntu/.pythonenv`. Before you run your python code in the container, you should activate the virtual environment as follows.
+```
+$ source .pythonenv/bin/activate
+(.pythonenv) python path/to/your/python/code.py
+(.pythonenv) deactivate
+$
+```
